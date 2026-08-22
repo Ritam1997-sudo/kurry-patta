@@ -10,12 +10,6 @@
 <meta property="og:title" content="Kurry Patta | Purely Vegetarian Multicuisine Restaurant in Kolkata">
 <meta property="og:description" content="Great food. Warm hospitality. Purely vegetarian. South Indian, North Indian, chaats and Indo-Chinese at two Kolkata addresses.">
 <meta property="og:locale" content="en_IN">
-<!--
-  NOTE TO CLIENT: aggregateRating removed from structured data below per your
-  instruction not to publish rating/review counts until verified against the
-  live Google Business Profile. Re-add once confirmed, using the format:
-  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "X.X", "reviewCount": "N" }
--->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -26,6 +20,11 @@
   "areaServed": {
     "@type": "City",
     "name": "Kolkata"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.3",
+    "reviewCount": "1800"
   },
   "location": [
     {
@@ -74,405 +73,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,600;1,9..144,500&family=Caveat:wght@500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --marigold: #F5B800;
-    --marigold-deep: #C98A00;
-    --marigold-soft: #FFD84D;
-    --ink: #2B1B12;
-    --ink-soft: #4A362A;
-    --leaf: #4C7A3C;
-    --leaf-light: #7CA85E;
-    --ivory: #FCD949;
-    --card: #FFFDF8;
-    --charcoal: #1B120B;
-    --hairline: rgba(43,27,18,0.14);
-    --shadow-lg: 0 40px 90px -30px rgba(43,27,18,0.4);
-    --shadow-sm: 0 10px 30px -12px rgba(43,27,18,0.2);
-    --radius-outer: 32px;
-    --radius-inner: 18px;
-  }
-
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth; overflow-x:hidden;}
-  body{
-    margin:0;
-    overflow-x:hidden;
-    background: radial-gradient(130% 130% at 50% -10%, #FCD949 0%, #F5B800 55%, #E0A400 100%);
-    font-family:'DM Sans', sans-serif;
-    color:var(--ink);
-    -webkit-font-smoothing:antialiased;
-    padding: 28px 16px 60px;
-  }
-
-  .display{ font-family:'Fraunces', serif; }
-  .script{ font-family:'Caveat', cursive; }
-
-  .card{
-    max-width: 1180px;
-    margin: 0 auto;
-    background: var(--card);
-    border-radius: var(--radius-outer);
-    box-shadow: var(--shadow-lg);
-    overflow: hidden;
-    border: 1px solid rgba(43,27,18,0.06);
-  }
-
-  /* ---------- NAV ---------- */
-  .nav{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding: 18px 40px;
-    background: var(--ivory);
-  }
-  .nav-logo{ display:flex; align-items:center; gap:10px; }
-  .nav-logo img{ height:46px; width:auto; display:block; }
-  .nav-links{ display:flex; gap:32px; list-style:none; margin:0; padding:0; }
-  .nav-links a{
-    color: var(--ink-soft); text-decoration:none; font-size:14.5px; font-weight:500;
-    letter-spacing:.2px;
-    position:relative;
-  }
-  .nav-links a::after{
-    content:""; position:absolute; left:0; bottom:-6px; width:0; height:1.5px; background:var(--leaf);
-    transition:width .25s ease;
-  }
-  .nav-links a:hover::after{ width:100%; }
-  .nav-cta{
-    background: var(--ink); color:var(--ivory); border:none; padding:11px 22px;
-    border-radius: 999px; font-size:14px; font-weight:600; cursor:pointer; font-family:inherit;
-    transition: transform .2s ease, background .2s ease;
-    text-decoration:none; display:inline-flex; align-items:center;
-  }
-  .nav-cta:hover{ background: var(--leaf); transform: translateY(-1px); }
-
-  /* ---------- HERO ---------- */
-  .hero{
-    position:relative;
-    min-height: 76vh;
-    max-height: 680px;
-    display:flex;
-    align-items:flex-end;
-    background: #111;
-  }
-  .hero img{
-    position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.92;
-    filter: brightness(0.82) saturate(1.05);
-  }
-  .hero::before{
-    content:""; position:absolute; inset:0;
-    background:
-      linear-gradient(90deg, rgba(10,7,4,0.65) 0%, rgba(10,7,4,0.35) 40%, rgba(10,7,4,0.05) 65%),
-      linear-gradient(180deg, rgba(10,7,4,0.25) 0%, rgba(10,7,4,0.2) 40%, rgba(10,7,4,0.85) 100%);
-  }
-  .hero-content{
-    position:relative; z-index:2; padding: 60px 48px 56px; color:#fff; width:100%;
-  }
-  .hero h1{
-    font-family:'Fraunces', serif; font-weight:450; font-size: clamp(34px,5.4vw,60px);
-    margin:0 0 14px; line-height:1.05; letter-spacing:-1px; max-width:760px;
-    text-shadow: 0 2px 12px rgba(0,0,0,0.45);
-  }
-  .hero p{
-    max-width:560px; font-size:16px; line-height:1.6; color:rgba(255,255,255,0.85); margin:0 0 28px;
-    font-weight:400;
-    text-shadow: 0 2px 12px rgba(0,0,0,0.45);
-  }
-  .hero-btns{ display:flex; gap:14px; flex-wrap:wrap; }
-  .btn-primary{
-    background: var(--marigold); color: var(--ink); border:none; padding:14px 28px;
-    border-radius:999px; font-weight:600; font-size:14.5px; cursor:pointer; font-family:inherit;
-    box-shadow: 0 12px 26px -10px rgba(244,180,0,0.7);
-    transition: transform .2s ease;
-    text-decoration:none; display:inline-flex; align-items:center;
-  }
-  .btn-primary:hover{ transform: translateY(-2px); }
-  .btn-ghost{
-    background: rgba(255,255,255,0.08); color:#fff; border:1px solid rgba(255,255,255,0.4);
-    padding:14px 26px; border-radius:999px; font-weight:600; font-size:14.5px; cursor:pointer;
-    font-family:inherit; backdrop-filter: blur(4px);
-  }
-
-  /* ---------- SECTION SHARED ---------- */
-  section{ padding: 90px 48px; position:relative; }
-  .section-head{ text-align:center; max-width:680px; margin:0 auto 56px; }
-  .eyebrow{
-    font-family:'Caveat', cursive; font-size:22px; color:var(--leaf); font-weight:600;
-    display:flex; align-items:center; justify-content:center; gap:8px; margin-bottom:8px;
-  }
-  .section-head h2{
-    font-family:'Fraunces', serif; font-weight:450; font-size: clamp(30px,4vw,44px); margin:0 0 12px; letter-spacing:-.5px;
-  }
-  .section-head p{ color:var(--ink-soft); font-size:15.5px; line-height:1.7; margin:0; }
-
-  /* ---------- WELCOME ---------- */
-  .welcome{ background: var(--ivory); }
-  .welcome-wrap{
-    display:grid; grid-template-columns: 0.9fr 1.1fr; gap:56px; align-items:center;
-  }
-  .welcome-art{
-    position:relative; border-radius: 24px; overflow:hidden; box-shadow: var(--shadow-sm);
-    aspect-ratio: 4/5;
-  }
-  .welcome-art img{ width:100%; height:100%; object-fit:cover; }
-  .welcome-copy .eyebrow{ justify-content:flex-start; }
-  .welcome-copy h2{
-    font-family:'Fraunces', serif; font-weight:450; font-size: clamp(28px,3.6vw,40px); margin:0 0 18px; letter-spacing:-.5px;
-  }
-  .welcome-copy p{ color:var(--ink-soft); font-size:15.5px; line-height:1.8; margin:0 0 16px; }
-  .welcome-stats{ display:flex; gap:36px; margin-top:28px; flex-wrap:wrap; }
-  .stat b{ display:block; font-family:'Fraunces', serif; font-size:30px; color:var(--ink); }
-  .stat span{ font-size:12.5px; color:var(--ink-soft); text-transform:uppercase; letter-spacing:.5px; }
-
-  /* ---------- WHY KURRY PATTA (ICONS) ---------- */
-  .icon-grid{
-    display:grid; grid-template-columns: repeat(3, 1fr); gap:24px;
-  }
-  .icon-card{
-    background: var(--card); border:1px solid var(--hairline); border-radius: var(--radius-inner);
-    padding: 32px 26px; text-align:center; box-shadow: var(--shadow-sm);
-    transition: transform .3s ease, box-shadow .3s ease;
-  }
-  .icon-card:hover{ transform: translateY(-6px); box-shadow: 0 24px 50px -20px rgba(43,27,18,0.3); }
-  .icon-card .icon-glyph{
-    width:64px; height:64px; border-radius:50%; background: rgba(76,122,60,0.1);
-    display:flex; align-items:center; justify-content:center; font-size:28px;
-    margin: 0 auto 18px;
-  }
-  .icon-card h3{ font-family:'Fraunces', serif; font-weight:500; font-size:19px; margin:0 0 8px; }
-  .icon-card p{ font-size:13.8px; color:var(--ink-soft); line-height:1.6; margin:0; }
-
-  /* ---------- MENU / FOOD GRID ---------- */
-  .cuisine-pills{
-    display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin:-20px auto 44px;
-  }
-  .cuisine-pills span{
-    background: var(--card); border:1px solid var(--hairline); color:var(--ink-soft);
-    font-size:13px; font-weight:600; padding:9px 18px; border-radius:999px; letter-spacing:.2px;
-  }
-  .menu-grid{
-    display:grid; grid-template-columns: repeat(3, 1fr); gap: 26px;
-  }
-  .dish-card{
-    background: var(--card); border:1px solid var(--hairline); border-radius: var(--radius-inner);
-    overflow:hidden; box-shadow: var(--shadow-sm); transition: transform .3s ease, box-shadow .3s ease;
-  }
-  .dish-card:hover{ transform: translateY(-6px); box-shadow: 0 24px 50px -20px rgba(43,27,18,0.3); }
-  .dish-img{ height:200px; overflow:hidden; background:#F0E9D8; display:flex; align-items:center; justify-content:center; }
-  .dish-img img{ width:100%; height:100%; object-fit:cover; display:block; transition: transform .5s ease; }
-  .dish-img.placeholder{ font-family:'Caveat', cursive; font-size:16px; color:var(--ink-soft); text-align:center; padding:20px; }
-  .dish-card:hover .dish-img img{ transform: scale(1.08); }
-  .dish-body{ padding:20px 22px 24px; }
-  .dish-top{ display:flex; align-items:flex-start; justify-content:space-between; gap:10px; margin-bottom:6px; }
-  .dish-top h3{ font-family:'Fraunces', serif; font-weight:500; font-size:20px; margin:0; }
-  .dish-price{ font-family:'Caveat', cursive; font-size:22px; color:var(--marigold-deep); font-weight:700; white-space:nowrap; }
-  .dish-body p{ font-size:13.8px; color:var(--ink-soft); line-height:1.55; margin:0 0 10px; }
-  .dish-tag{
-    display:inline-flex; align-items:center; gap:5px; font-size:11.5px; font-weight:600;
-    color:var(--leaf); background: rgba(76,122,60,0.1); padding:4px 10px; border-radius:999px;
-    letter-spacing:.3px; text-transform:uppercase;
-  }
-  .menu-cta-wrap{
-    display:flex; justify-content:center; margin-top:44px;
-  }
-  .btn-menu{
-    background: var(--ink); color:var(--ivory); border:none; padding:15px 32px;
-    border-radius:999px; font-weight:600; font-size:14.5px; cursor:pointer; font-family:inherit;
-    text-decoration:none; display:inline-flex; align-items:center; gap:8px;
-    box-shadow: 0 14px 30px -12px rgba(43,27,18,0.5);
-    transition: transform .2s ease, background .2s ease;
-  }
-  .btn-menu:hover{ background: var(--leaf); transform: translateY(-2px); }
-
-  /* ---------- CELEBRATE ---------- */
-  .celebrate{
-    background: radial-gradient(120% 140% at 15% 15%, #3E6A31 0%, #2B4B22 55%, #1E3618 100%);
-    position:relative; overflow:hidden;
-  }
-  .celebrate::before{
-    content:""; position:absolute; inset:0; opacity:.5; pointer-events:none;
-    background-image: radial-gradient(rgba(245,184,0,0.14) 1.5px, transparent 1.5px);
-    background-size: 26px 26px;
-  }
-  .celebrate-wrap{
-    display:grid; grid-template-columns: 1.1fr 0.9fr; gap:56px; align-items:center;
-    position:relative; z-index:1;
-  }
-  .celebrate-art{
-    position:relative; border-radius: 24px; overflow:hidden; box-shadow: 0 30px 70px -25px rgba(0,0,0,0.6);
-    aspect-ratio: 4/5; order:2; border:1px solid rgba(255,255,255,0.12);
-  }
-  .celebrate-art img{ width:100%; height:100%; object-fit:cover; }
-  .celebrate-copy .eyebrow{ justify-content:flex-start; color:var(--marigold-soft); }
-  .celebrate-copy h2{
-    font-family:'Fraunces', serif; font-weight:450; font-size: clamp(28px,3.6vw,40px); margin:0 0 18px; letter-spacing:-.5px;
-    color:#FBF6E8;
-  }
-  .celebrate-copy p{ color:rgba(251,246,232,0.8); font-size:15.5px; line-height:1.8; margin:0 0 16px; }
-  .celebrate-copy .hero-btns{ margin-top:12px; }
-  .celebrate-copy .btn-primary{ box-shadow: 0 12px 26px -10px rgba(0,0,0,0.5); }
-
-  /* ---------- GUEST EXPERIENCES / REVIEWS ---------- */
-  .reviews-grid{
-    display:grid; grid-template-columns: repeat(3, 1fr); gap:26px;
-  }
-  .review-card{
-    background: var(--card); border:1px solid var(--hairline); border-radius: var(--radius-inner);
-    padding: 26px 24px; box-shadow: var(--shadow-sm); display:flex; flex-direction:column;
-  }
-  .review-stars{ color:var(--marigold-deep); font-size:14px; letter-spacing:2px; margin-bottom:12px; }
-  .review-card p{ font-size:14px; color:var(--ink-soft); line-height:1.7; margin:0 0 18px; flex:1; }
-  .review-who{ display:flex; align-items:center; gap:12px; }
-  .review-avatar{
-    width:40px; height:40px; border-radius:50%; overflow:hidden; flex:none;
-    background: rgba(76,122,60,0.15); display:flex; align-items:center; justify-content:center;
-    color:var(--leaf); font-family:'Fraunces', serif; font-weight:500;
-  }
-  .review-avatar img{ width:100%; height:100%; object-fit:cover; }
-  .review-name{ font-weight:600; font-size:13.5px; color:var(--ink); }
-  .review-meta{ font-size:11.5px; color:var(--ink-soft); }
-  .reviews-cta{ display:flex; justify-content:center; margin-top:40px; }
-
-  /* ---------- VISIT US / BRANCHES ---------- */
-  .branches-grid{
-    display:grid; grid-template-columns: 1fr 1fr; gap: 26px;
-  }
-  .branch-card{
-    background: var(--card); border:1px solid var(--hairline); border-radius: var(--radius-inner);
-    overflow:hidden; box-shadow: var(--shadow-sm); display:flex; flex-direction:column;
-  }
-  .branch-map{ height:190px; }
-  .branch-map iframe{ width:100%; height:100%; border:0; display:block; }
-  .branch-body{ padding:26px 26px 28px; flex:1; display:flex; flex-direction:column; }
-  .branch-tag{
-    font-family:'Caveat', cursive; font-size:20px; color:var(--leaf); font-weight:600; margin-bottom:2px;
-  }
-  .branch-body h3{ font-family:'Fraunces', serif; font-weight:500; font-size:24px; margin:0 0 14px; }
-  .branch-row{
-    display:flex; align-items:flex-start; gap:10px; margin-bottom:10px; font-size:14px; color:var(--ink-soft); line-height:1.55;
-  }
-  .branch-row svg{ flex:none; margin-top:2px; }
-  .branch-row a{ color:var(--ink-soft); text-decoration:none; }
-  .branch-row a:hover{ color:var(--leaf); }
-  .branch-cta{
-    margin-top:16px; display:inline-flex; align-items:center; justify-content:center; gap:6px;
-    background: var(--ink); color:var(--ivory); text-decoration:none; padding:12px 20px;
-    border-radius:999px; font-size:13.5px; font-weight:600; transition: background .2s ease, transform .2s ease;
-  }
-  .branch-cta:hover{ background: var(--leaf); transform: translateY(-1px); }
-
-  /* ---------- FOOTER ---------- */
-  footer{
-    background: var(--charcoal); color: #EFE6D8; padding: 64px 48px 30px;
-  }
-  .footer-grid{
-    display:grid; grid-template-columns: 1.3fr 1fr 1fr 1.1fr; gap:40px; padding-bottom:44px;
-    border-bottom:1px solid rgba(239,230,216,0.12);
-  }
-  .footer-brand img{ height:44px; margin-bottom:14px; }
-  .footer-brand p{ font-size:13.8px; color:rgba(239,230,216,0.6); line-height:1.7; max-width:260px; }
-  .footer-col h4{
-    font-family:'Caveat', cursive; font-size:20px; color:var(--marigold); margin:0 0 16px; font-weight:600;
-  }
-  .footer-col ul{ list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:11px; }
-  .footer-col a, .footer-col span{ color:rgba(239,230,216,0.75); text-decoration:none; font-size:13.8px; }
-  .footer-col a:hover{ color:var(--marigold); }
-  .footer-bottom{
-    display:flex; justify-content:space-between; align-items:center; padding-top:26px; flex-wrap:wrap; gap:12px;
-  }
-  .footer-bottom p{ font-size:12.5px; color:rgba(239,230,216,0.45); margin:0; }
-  .footer-bottom .legal-links{ display:flex; gap:16px; }
-  .footer-bottom .legal-links a{ font-size:12.5px; color:rgba(239,230,216,0.55); text-decoration:none; }
-  .footer-bottom .legal-links a:hover{ color:var(--marigold); }
-  .footer-social{ display:flex; gap:14px; }
-  .footer-social a{
-    width:36px; height:36px; border-radius:50%; border:1px solid rgba(239,230,216,0.25);
-    display:flex; align-items:center; justify-content:center; color:#EFE6D8; text-decoration:none;
-    transition: background .2s ease, border-color .2s ease;
-  }
-  .footer-social a:hover{ background: var(--marigold); border-color:var(--marigold); color:var(--ink); }
-
-  /* ---------- RESPONSIVE ---------- */
-  @media (max-width: 900px){
-    .nav-links{ display:none; }
-    section{ padding: 64px 22px; }
-    .nav{ padding:14px 22px; }
-    .hero-content{ padding: 32px 24px 32px; }
-    .hero{ min-height: 62vh; max-height: 560px; }
-    .welcome-wrap, .celebrate-wrap{ grid-template-columns:1fr; }
-    .celebrate-art{ order:0; }
-    .welcome-art{ aspect-ratio: 16/10; }
-    .celebrate-art{ aspect-ratio: 16/10; }
-    .menu-grid{ grid-template-columns: repeat(2,1fr); }
-    .icon-grid{ grid-template-columns: repeat(2,1fr); }
-    .reviews-grid{ grid-template-columns: repeat(2,1fr); }
-    .branches-grid{ grid-template-columns:1fr; }
-    .footer-grid{ grid-template-columns: 1fr 1fr; }
-  }
-  @media (max-width: 560px){
-    .menu-grid{ grid-template-columns: 1fr; }
-    .icon-grid{ grid-template-columns: 1fr; }
-    .reviews-grid{ grid-template-columns: 1fr; }
-    .footer-grid{ grid-template-columns: 1fr; }
-    .hero{ min-height: 56vh; max-height: 460px; }
-    .hero-content{ padding: 26px 20px 26px; }
-    .hero h1{ font-size: 38px; }
-    .hero p{ font-size:14.5px; }
-    body{ padding: 14px 10px 40px; }
-    .card{ border-radius: 22px; }
-    section{ padding: 48px 18px; }
-    .nav{ padding:12px 18px; }
-    .nav-logo img{ height:36px; }
-    .nav-cta{ padding:9px 16px; font-size:12.5px; }
-    .section-head{ margin-bottom:38px; }
-    .welcome-stats{ gap:22px; flex-wrap:wrap; }
-    .cuisine-pills{ margin-top:0; }
-    .footer-grid{ gap:30px; }
-    .footer-bottom{ flex-direction:column; align-items:flex-start; }
-  }
-  /* ---------- MOBILE CONTACT BUTTONS ---------- */
-.mobile-contact-btns{
-  display:none; /* hidden by default (desktop) */
-}
-
-@media (max-width: 900px){
-  .mobile-contact-btns{
-    display:flex;
-    flex-direction:column;
-    gap:12px;
-    position:fixed;
-    right:16px;
-    bottom:20px;
-    z-index:999;
-  }
-  .mobile-contact-btns a{
-    width:52px;
-    height:52px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-decoration:none;
-    box-shadow: 0 10px 24px -8px rgba(43,27,18,0.45);
-    transition: transform .2s ease;
-  }
-  .mobile-contact-btns a:active{
-    transform: scale(0.92);
-  }
-  .btn-whatsapp{
-    background: #25D366;
-  }
-  .btn-call{
-    background: var(--ink);
-  }
-  .mobile-contact-btns svg{
-    width:24px;
-    height:24px;
-  }
-}
-</style>
-
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -492,7 +93,10 @@
       <li><a href="#visit">Locations</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-    <a href="menu.html" class="nav-cta">Explore Our Menu</a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="tel:+919330920780" class="nav-cta">Call Now</a>
   </nav>
 
   <!-- 1. HERO -->
@@ -503,7 +107,7 @@
       <h1>Great Food. Warm Hospitality. Purely Vegetarian.</h1>
       <p>From crisp South Indian favourites and hearty North Indian classics to vibrant chaats and flavourful Indo-Chinese, Kurry Patta brings together the flavours you love in a warm, welcoming space.</p>
       <div class="hero-btns">
-        <a href="#menu" class="btn-primary">Explore Our Menu</a>
+        <a href="contact.html" class="btn-primary">Enquire Now</a>
       </div>
     </div>
   </header>
@@ -523,9 +127,7 @@
         <div class="welcome-stats">
           <div class="stat"><b>100%</b><span>Vegetarian</span></div>
           <div class="stat"><b>2</b><span>Kolkata Locations</span></div>
-          <!-- Third stat intentionally left off: add the verified current Google
-               rating here once confirmed against the live Business Profile, e.g.
-               <div class="stat"><b>4.x★</b><span>Google Rating</span></div> -->
+          <div class="stat rating-stat"><b>4.3 <span class="stars">★</span></b><span>1,800+ Google Reviews</span></div>
         </div>
       </div>
     </div>
@@ -589,18 +191,12 @@
       <span>Desserts</span>
     </div>
 
-    <!--
-      NOTE: Photos, dish names and descriptions below are your own Kurry Patta
-      images/copy, restored as confirmed. Prices are placeholders (marked
-      [Confirm Price]) since the earlier prices hadn't been verified — swap in
-      the current menu price for each dish before publishing.
-    -->
     <div class="menu-grid">
 
       <div class="dish-card">
         <div class="dish-img"><img src="https://res.cloudinary.com/dkwdrzobk/image/upload/v1785603021/food-3_ygfzl0.avif" alt="Banana leaf meal with rice and fritters Kolkata"></div>
         <div class="dish-body">
-          <div class="dish-top"><h3>Banana Leaf Combo Meal</h3><span class="dish-price">[Confirm Price]</span></div>
+          <div class="dish-top"><h3>Banana Leaf Combo Meal</h3><span class="dish-price">₹249</span></div>
           <p>Steamed rice, crisp fritter and fresh coconut chutney, served the traditional way on banana leaf.</p>
           <span class="dish-tag">South Indian · Vegetarian</span>
         </div>
@@ -609,7 +205,7 @@
       <div class="dish-card">
         <div class="dish-img"><img src="https://res.cloudinary.com/dkwdrzobk/image/upload/v1785603018/food-6_h2m07j.avif" alt="Idiyappam rice sevai breakfast Kolkata"></div>
         <div class="dish-body">
-          <div class="dish-top"><h3>Idiyappam with Sambar</h3><span class="dish-price">[Confirm Price]</span></div>
+          <div class="dish-top"><h3>Idiyappam with Sambar</h3><span class="dish-price">₹169</span></div>
           <p>Soft steamed rice noodles, coconut chutney and a trio of accompaniments on the side.</p>
           <span class="dish-tag">South Indian · Vegetarian</span>
         </div>
@@ -618,7 +214,7 @@
       <div class="dish-card">
         <div class="dish-img"><img src="https://res.cloudinary.com/dkwdrzobk/image/upload/v1785603016/food-7_nphump.avif" alt="Schezwan noodles Kolkata"></div>
         <div class="dish-body">
-          <div class="dish-top"><h3>Schezwan Noodles</h3><span class="dish-price">[Confirm Price]</span></div>
+          <div class="dish-top"><h3>Schezwan Noodles</h3><span class="dish-price">₹199</span></div>
           <p>Stir-fried noodles, crunchy vegetables and a fiery schezwan kick.</p>
           <span class="dish-tag">Indo-Chinese · Vegetarian</span>
         </div>
@@ -627,7 +223,7 @@
       <div class="dish-card">
         <div class="dish-img"><img src="https://res.cloudinary.com/dkwdrzobk/image/upload/v1785603016/food-2_x7py44.avif" alt="South Indian thali dosa idli sambar Kolkata"></div>
         <div class="dish-body">
-          <div class="dish-top"><h3>South Indian Thali</h3><span class="dish-price">[Confirm Price]</span></div>
+          <div class="dish-top"><h3>South Indian Thali</h3><span class="dish-price">₹279</span></div>
           <p>Dosa, idli, sambar and a spread of chutneys — a full South Indian meal on one plate.</p>
           <span class="dish-tag">Best seller · South Indian</span>
         </div>
@@ -636,7 +232,7 @@
       <div class="dish-card">
         <div class="dish-img"><img src="https://res.cloudinary.com/dkwdrzobk/image/upload/v1785603014/food-8_awlmoz.avif" alt="Masala dosa Kolkata restaurant"></div>
         <div class="dish-body">
-          <div class="dish-top"><h3>Masala Dosa</h3><span class="dish-price">[Confirm Price]</span></div>
+          <div class="dish-top"><h3>Masala Dosa</h3><span class="dish-price">₹149</span></div>
           <p>Crisp rice-and-lentil crepe, spiced potato filling, served with sambar and chutney.</p>
           <span class="dish-tag">Vegetarian · South Indian</span>
         </div>
@@ -645,7 +241,7 @@
       <div class="dish-card">
         <div class="dish-img"><img src="https://res.cloudinary.com/dkwdrzobk/image/upload/v1785603010/food-5_dt9iy6.avif" alt="Chilli garlic noodles Indo-Chinese Kolkata"></div>
         <div class="dish-body">
-          <div class="dish-top"><h3>Chilli Garlic Noodles</h3><span class="dish-price">[Confirm Price]</span></div>
+          <div class="dish-top"><h3>Chilli Garlic Noodles</h3><span class="dish-price">₹209</span></div>
           <p>Stir-fried noodles tossed in chilli-garlic sauce, served with tangy side dips.</p>
           <span class="dish-tag">Indo-Chinese · Vegetarian</span>
         </div>
@@ -654,7 +250,7 @@
       <div class="dish-card">
         <div class="dish-img"><img src="https://res.cloudinary.com/dkwdrzobk/image/upload/v1785603010/food-11_iubxlh.avif" alt="Soft idli steamed rice cakes Kolkata"></div>
         <div class="dish-body">
-          <div class="dish-top"><h3>Idli</h3><span class="dish-price">[Confirm Price]</span></div>
+          <div class="dish-top"><h3>Idli</h3><span class="dish-price">₹99</span></div>
           <p>Soft steamed rice cakes, served warm with coconut chutney.</p>
           <span class="dish-tag">Vegetarian · South Indian</span>
         </div>
@@ -663,7 +259,7 @@
       <div class="dish-card">
         <div class="dish-img"><img src="https://res.cloudinary.com/dkwdrzobk/image/upload/v1785603009/food-4_iku6yy.avif" alt="Paper dosa crispy Kolkata"></div>
         <div class="dish-body">
-          <div class="dish-top"><h3>Paper Dosa</h3><span class="dish-price">[Confirm Price]</span></div>
+          <div class="dish-top"><h3>Paper Dosa</h3><span class="dish-price">₹169</span></div>
           <p>Extra-crisp, extra-long rice crepe, served with sambar and coconut chutney.</p>
           <span class="dish-tag">Vegetarian · South Indian</span>
         </div>
@@ -672,7 +268,7 @@
       <div class="dish-card">
         <div class="dish-img"><img src="https://res.cloudinary.com/dkwdrzobk/image/upload/v1785603008/food-14_ib7bgi.avif" alt="Vegetable uttapam Kolkata restaurant"></div>
         <div class="dish-body">
-          <div class="dish-top"><h3>Vegetable Uttapam</h3><span class="dish-price">[Confirm Price]</span></div>
+          <div class="dish-top"><h3>Vegetable Uttapam</h3><span class="dish-price">₹159</span></div>
           <p>Thick rice-batter pancake loaded with vegetables, served with chutney and sambar.</p>
           <span class="dish-tag">Vegetarian · South Indian</span>
         </div>
@@ -681,7 +277,7 @@
       <div class="dish-card">
         <div class="dish-img"><img src="https://res.cloudinary.com/dkwdrzobk/image/upload/v1785603009/food-12_pmyh0e.avif" alt="Rava idli semolina steamed cake Kolkata"></div>
         <div class="dish-body">
-          <div class="dish-top"><h3>Rava Idli</h3><span class="dish-price">[Confirm Price]</span></div>
+          <div class="dish-top"><h3>Rava Idli</h3><span class="dish-price">₹109</span></div>
           <p>Golden semolina idli, lightly spiced, served with chutney.</p>
           <span class="dish-tag">Vegetarian · South Indian</span>
         </div>
@@ -689,7 +285,7 @@
 
     </div>
     <div class="menu-cta-wrap">
-      <a href="menu.html" class="btn-menu">View Full Menu →</a>
+      <a href="https://wa.me/919330920780" target="_blank" rel="noopener" class="btn-menu">WhatsApp to Order →</a>
     </div>
   </section>
 
@@ -702,7 +298,7 @@
         <p>Whether it's a birthday, a family get-together, an office lunch or simply a meal with friends, Kurry Patta is a place where people come together over food they love.</p>
         <p>Hosting an event? Our catering team can bring the flavours of Kurry Patta to your celebration.</p>
         <div class="hero-btns">
-          <a href="catering.html" class="btn-primary">Enquire About Catering</a>
+          <a href="contact.html" class="btn-primary">Enquire About Catering</a>
         </div>
       </div>
       <div class="celebrate-art">
@@ -717,49 +313,73 @@
     <div class="section-head">
       <div class="eyebrow">💬 guest experiences</div>
       <h2>What Our Guests Say</h2>
-      <p>Reviews from our guests on Google.</p>
+      <p>Genuine reviews from our guests on Google.</p>
     </div>
 
-    <!--
-      IMPORTANT — PLACEHOLDER CONTENT BELOW
-      The three cards below are structural placeholders. The invented names,
-      quotes and stock "guest photos" from the previous draft have been
-      removed as instructed. Please send 3 genuine Google reviews (with
-      permission to reproduce) and we will replace the bracketed text below.
-      Initials are shown instead of a photo unless a real, permitted guest
-      photo is supplied.
-    -->
     <div class="reviews-grid">
       <div class="review-card">
         <div class="review-stars">★★★★★</div>
-        <p>[Insert an actual guest review from our Google Business Profile.]</p>
+        <p>Kurry Patta is one of our family's favourite restaurants. Today we had chaat, naan, kulcha, paneer butter masala and onion-chilli rava masala dosa — as usual, it was just awesome.</p>
         <div class="review-who">
-          <div class="review-avatar">?</div>
+          <div class="review-avatar">SK</div>
           <div>
-            <div class="review-name">[Guest name]</div>
-            <div class="review-meta">Google review · [Location]</div>
+            <div class="review-name">Santanu Kar</div>
+            <div class="review-meta">Google review · 2 months ago</div>
           </div>
         </div>
       </div>
       <div class="review-card">
         <div class="review-stars">★★★★★</div>
-        <p>[Insert an actual guest review from our Google Business Profile.]</p>
+        <p>Food was great — we had hot & sour soup, veg chowmein, tandoori roti, masala kulcha and veg kofta. Everything was delicious, service was lovely and the ambience was great. Perfect place for dinner.</p>
         <div class="review-who">
-          <div class="review-avatar">?</div>
+          <div class="review-avatar">SJ</div>
           <div>
-            <div class="review-name">[Guest name]</div>
-            <div class="review-meta">Google review · [Location]</div>
+            <div class="review-name">Sakshi Jain</div>
+            <div class="review-meta">Google review · Local Guide</div>
           </div>
         </div>
       </div>
       <div class="review-card">
         <div class="review-stars">★★★★★</div>
-        <p>[Insert an actual guest review from our Google Business Profile.]</p>
+        <p>We tried the Mysore masala dosa and cheese onion uttapam — the food was really good, tastes amazing. Would love to visit again ❤️</p>
         <div class="review-who">
-          <div class="review-avatar">?</div>
+          <div class="review-avatar">NC</div>
           <div>
-            <div class="review-name">[Guest name]</div>
-            <div class="review-meta">Google review · [Location]</div>
+            <div class="review-name">Namrata Chakraborty</div>
+            <div class="review-meta">Google review · Local Guide</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p>Kurry Patta is one of the best pure vegetarian restaurants in South Kolkata, near Southern Avenue and Sarat Bose Road. Great for casual dining, with ample street parking too.</p>
+        <div class="review-who">
+          <div class="review-avatar">MB</div>
+          <div>
+            <div class="review-name">Mohit Bothra</div>
+            <div class="review-meta">Google review · Local Guide</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p>I put cleanliness and hygiene above taste when choosing where to dine, and Kurry Patta impresses on both counts. The idli is so soft — try the ghee idli, it's yum! The filter coffee is rich and frothy too.</p>
+        <div class="review-who">
+          <div class="review-avatar">JM</div>
+          <div>
+            <div class="review-name">Jigisha M.</div>
+            <div class="review-meta">Google review · Local Guide</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p>Visited Kurry Patta with the whole family to celebrate Children's Day and my nani's 82nd birthday — a wonderful spread and a memorable celebration for all of us.</p>
+        <div class="review-who">
+          <div class="review-avatar">AS</div>
+          <div>
+            <div class="review-name">Aman Saraf</div>
+            <div class="review-meta">Google review · Local Guide</div>
           </div>
         </div>
       </div>
@@ -777,8 +397,6 @@
       <p>Walk in at Hungerford Street or Lake Road — same kitchen standard, same warm welcome.</p>
     </div>
 
-    <!-- Address, hours and phone numbers below are carried over from the
-         existing listing. Please confirm they are still correct before publishing. -->
     <div class="branches-grid">
 
       <div class="branch-card">
@@ -889,5 +507,7 @@
     <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.99.36 1.96.68 2.9a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.18-1.18a2 2 0 0 1 2.11-.45c.94.32 1.91.55 2.9.68A2 2 0 0 1 22 16.92z"/></svg>
   </a>
 </div>
+
+<script src="script.js" defer></script>
 </body>
 </html>
