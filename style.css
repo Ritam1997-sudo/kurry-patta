@@ -51,7 +51,7 @@ body{
   position:relative;
 }
 .nav-logo{ display:flex; align-items:center; gap:10px; }
-.nav-logo img{ height:64px; width:auto; display:block; }
+.nav-logo img{ height:88px; width:auto; display:block; } /* enlarged per client request */
 .nav-links{ display:flex; gap:32px; list-style:none; margin:0; padding:0; }
 .nav-links a{
   color: var(--ink-soft); text-decoration:none; font-size:14.5px; font-weight:500;
@@ -179,10 +179,6 @@ body{
 /* ---------- SECTION SHARED ---------- */
 section{ padding: 90px 48px; position:relative; }
 .section-head{ text-align:center; max-width:680px; margin:0 auto 56px; }
-.eyebrow{
-  font-family:'Caveat', cursive; font-size:22px; color:var(--leaf); font-weight:600;
-  display:flex; align-items:center; justify-content:center; gap:8px; margin-bottom:8px;
-}
 .section-head h2{
   font-family:'Fraunces', serif; font-weight:450; font-size: clamp(30px,4vw,44px); margin:0 0 12px; letter-spacing:-.5px;
 }
@@ -198,7 +194,6 @@ section{ padding: 90px 48px; position:relative; }
   aspect-ratio: 4/5;
 }
 .welcome-art img{ width:100%; height:100%; object-fit:cover; }
-.welcome-copy .eyebrow{ justify-content:flex-start; }
 .welcome-copy h2{
   font-family:'Fraunces', serif; font-weight:450; font-size: clamp(28px,3.6vw,40px); margin:0 0 18px; letter-spacing:-.5px;
 }
@@ -255,7 +250,7 @@ section{ padding: 90px 48px; position:relative; }
 .dish-tag{
   display:inline-flex; align-items:center; gap:5px; font-size:11.5px; font-weight:600;
   color:var(--leaf); background: rgba(76,122,60,0.1); padding:4px 10px; border-radius:999px;
-  letter-spacing:.3px; text-transform:uppercase;
+  letter-spacing:.3px; text-transform:uppercase; margin-top:10px;
 }
 .menu-cta-wrap{
   display:flex; justify-content:center; margin-top:44px;
@@ -288,7 +283,6 @@ section{ padding: 90px 48px; position:relative; }
   aspect-ratio: 4/5; order:2; border:1px solid rgba(255,255,255,0.12);
 }
 .celebrate-art img{ width:100%; height:100%; object-fit:cover; }
-.celebrate-copy .eyebrow{ justify-content:flex-start; color:var(--marigold-soft); }
 .celebrate-copy h2{
   font-family:'Fraunces', serif; font-weight:450; font-size: clamp(28px,3.6vw,40px); margin:0 0 18px; letter-spacing:-.5px;
   color:#FBF6E8;
@@ -328,9 +322,6 @@ section{ padding: 90px 48px; position:relative; }
 .branch-map{ height:190px; }
 .branch-map iframe{ width:100%; height:100%; border:0; display:block; }
 .branch-body{ padding:26px 26px 28px; flex:1; display:flex; flex-direction:column; }
-.branch-tag{
-  font-family:'Caveat', cursive; font-size:20px; color:var(--leaf); font-weight:600; margin-bottom:2px;
-}
 .branch-body h3{ font-family:'Fraunces', serif; font-weight:500; font-size:24px; margin:0 0 14px; }
 .branch-row{
   display:flex; align-items:flex-start; gap:10px; margin-bottom:10px; font-size:14px; color:var(--ink-soft); line-height:1.55;
@@ -362,7 +353,6 @@ section{ padding: 90px 48px; position:relative; }
   aspect-ratio: 4/5;
 }
 .story-art img{ width:100%; height:100%; object-fit:cover; display:block; }
-.story-copy .eyebrow{ justify-content:flex-start; }
 .story-copy h2{
   font-family:'Fraunces', serif; font-weight:450; font-size: clamp(26px,3.4vw,36px);
   margin:0 0 16px; letter-spacing:-.5px;
@@ -394,11 +384,6 @@ section{ padding: 90px 48px; position:relative; }
   width:100%; height:100%; object-fit:cover; display:block; transition: transform .5s ease;
 }
 .gallery-item:hover img{ transform: scale(1.08); }
-.gallery-item span{
-  position:absolute; left:12px; bottom:12px; z-index:2;
-  background: rgba(27,18,11,0.72); color:var(--ivory); font-size:11.5px; font-weight:600;
-  letter-spacing:.3px; text-transform:uppercase; padding:5px 12px; border-radius:999px;
-}
 .gallery-item.gallery-empty-item{
   background: var(--card); border:1px dashed var(--hairline); box-shadow:none;
   display:flex; align-items:center; justify-content:center;
@@ -591,7 +576,7 @@ footer{
   .card{ border-radius: 22px; }
   section{ padding: 48px 18px; }
   .nav{ padding:12px 18px; }
-  .nav-logo img{ height:52px; }
+  .nav-logo img{ height:68px; } /* enlarged per client request */
   .nav-cta{ padding:9px 16px; font-size:12.5px; }
   .section-head{ margin-bottom:38px; }
   .welcome-stats{ gap:22px; flex-wrap:wrap; }
