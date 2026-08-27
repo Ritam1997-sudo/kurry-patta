@@ -357,7 +357,14 @@ section{ padding: 90px 48px; position:relative; }
   font-family:'Fraunces', serif; font-weight:450; font-size: clamp(26px,3.4vw,36px);
   margin:0 0 16px; letter-spacing:-.5px;
 }
+.story-art-wide{
+  aspect-ratio: 16/10;
+}
+@media (max-width: 900px){
+  .story-art-wide{ aspect-ratio: 16/10; } /* same as mobile default, kept for clarity */
+}
 .story-copy p{ color:var(--ink-soft); font-size:15.5px; line-height:1.8; margin:0; }
+
 
 /* ---------- GALLERY PAGE (gallery.html) ---------- */
 .gallery-filter{
