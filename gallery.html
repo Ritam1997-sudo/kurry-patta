@@ -44,37 +44,53 @@
     </div>
   </header>
 
-  <!-- GALLERY -->
-  <!-- NOTE ON THIS SECTION:
-       - "Our Spaces" filter/category and its 4 repeated interior shots have been removed per client
-         feedback (they duplicated the "Step Inside Kurry Patta" section already used on other pages).
-       - No "Our Food" filter existed in the original code to remove; if the client meant a different
-         label, please point us to it.
-       - The "Celebrations" photo below is still a stock placeholder — PENDING real catering/celebration
-         photos from the client's shared folder.
-       - "Behind the Scenes" is left as an honest empty state until real photos are supplied.
-       - Any duplicate food photos (incl. the Podi/Molagapodi Idli image mentioned in feedback) live in
-         menu.html, which was not included in the files provided to us — see summary for details. -->
-  <section>
-    <div class="gallery-filter">
-      <button data-filter="all" class="active">All</button>
-      <button data-filter="celebrations">Celebrations</button>
-      <button data-filter="behind">Behind the Scenes</button>
+ <!-- GALLERY -->
+<section>
+  <div class="section-head" style="margin-bottom:28px;">
+    <h2>Check Out Our Gallery</h2>
+    <p>A few glimpses of Kurry Patta — the food, the space, and the moments we get to be part of.</p>
+  </div>
+
+  <div class="gallery-filter">
+    <button data-filter="all" class="active">All</button>
+    <button data-filter="food">Food</button>
+    <button data-filter="interior">Interior</button>
+    <button data-filter="celebrations">Celebrations</button>
+    <button data-filter="behind">Behind the Scenes</button>
+  </div>
+
+  <div class="gallery-grid">
+
+    <!-- FOOD -->
+    <div class="gallery-item" data-category="food"><img src="https://res.cloudinary.com/dkwdrzobk/image/upload/v1785603021/food-3_ygfzl0.avif" alt="Masala Vada"></div>
+    <div class="gallery-item" data-category="food"><img src="https://res.cloudinary.com/dkwdrzobk/image/upload/v1785603018/food-6_h2m07j.avif" alt="Multi Cuisine Spread"></div>
+    <div class="gallery-item" data-category="food"><img src="https://res.cloudinary.com/dkwdrzobk/image/upload/v1785603016/food-7_nphump.avif" alt="Veg Chowmin"></div>
+    <div class="gallery-item" data-category="food"><img src="https://res.cloudinary.com/dkwdrzobk/image/upload/v1785603016/food-2_x7py44.avif" alt="South Indian Spread"></div>
+    <div class="gallery-item" data-category="food"><img src="https://res.cloudinary.com/dkwdrzobk/image/upload/v1785603014/food-8_awlmoz.avif" alt="Gunpowder Rava Dosa"></div>
+    <div class="gallery-item" data-category="food"><img src="https://res.cloudinary.com/dkwdrzobk/image/upload/v1785603010/food-5_dt9iy6.avif" alt="Chinese Spread"></div>
+    <div class="gallery-item" data-category="food"><img src="https://res.cloudinary.com/dkwdrzobk/image/upload/v1785603010/food-11_iubxlh.avif" alt="Molagapodi Idli"></div>
+    <div class="gallery-item" data-category="food"><img src="https://res.cloudinary.com/dkwdrzobk/image/upload/v1785603008/food-14_ib7bgi.avif" alt="Mix Uttapam"></div>
+    <div class="gallery-item" data-category="food"><img src="https://ritam1997-sudo.github.io/kurry-patta/daahi-vada.avif" alt="Dahi Vada"></div>
+    <div class="gallery-item" data-category="food"><img src="https://ritam1997-sudo.github.io/kurry-patta/story-4.avif" alt="Masala dosa at Kurry Patta"></div>
+    <div class="gallery-item" data-category="food"><img src="https://ritam1997-sudo.github.io/kurry-patta/customer-2.avif" alt="Idli and chutney at Kurry Patta"></div>
+
+    <!-- INTERIOR -->
+    <div class="gallery-item" data-category="interior"><img src="https://ritam1997-sudo.github.io/kurry-patta/kurry-in.avif" alt="Kurry Patta restaurant interior"></div>
+    <div class="gallery-item" data-category="interior"><img src="https://ritam1997-sudo.github.io/kurry-patta/customer-1.avif" alt="Kurry Patta dining space"></div>
+    <div class="gallery-item" data-category="interior"><img src="https://ritam1997-sudo.github.io/kurry-patta/catering-1.avif" alt="Inside Kurry Patta"></div>
+
+    <!-- CELEBRATIONS -->
+    <div class="gallery-item" data-category="celebrations"><img src="https://ritam1997-sudo.github.io/kurry-patta/catering-2.avif" alt="Celebrations and gatherings at Kurry Patta"></div>
+    <!-- PENDING: replace with a real Kurry Patta catering/celebration photo from the shared folder -->
+    <div class="gallery-item" data-category="celebrations"><img src="https://media.istockphoto.com/id/2180482774/photo/interior-lounge-architecture.webp?a=1&b=1&s=612x612&w=0&k=20&c=-ZO0oNFZH_AC5WH6uhFD3E7gGBvuOVQ24GbudA-b4ck=" alt="Celebration at Kurry Patta — placeholder, pending real photo"></div>
+
+    <!-- BEHIND THE SCENES — no photos supplied yet, honest empty state instead of stock images -->
+    <div class="gallery-item gallery-empty-item" data-category="behind">
+      <div class="gallery-empty">Behind-the-scenes photos coming soon.</div>
     </div>
 
-    <div class="gallery-grid">
-
-      <!-- PENDING: replace with a real Kurry Patta catering/celebration photo from the shared folder -->
-      <div class="gallery-item" data-category="celebrations"><img src="https://media.istockphoto.com/id/2180482774/photo/interior-lounge-architecture.webp?a=1&b=1&s=612x612&w=0&k=20&c=-ZO0oNFZH_AC5WH6uhFD3E7gGBvuOVQ24GbudA-b4ck=" alt="Celebration at Kurry Patta — placeholder, pending real photo"></div>
-
-      <!-- BEHIND THE SCENES — no photos supplied yet, honest empty state instead of stock images -->
-      <div class="gallery-item gallery-empty-item" data-category="behind">
-        <div class="gallery-empty">Behind-the-scenes photos coming soon.</div>
-      </div>
-
-    </div>
-  </section>
-
+  </div>
+</section>
   <!-- FOOTER -->
   <footer>
     <div class="footer-grid">
